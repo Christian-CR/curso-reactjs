@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <meta charset="UTF-8">
+
+      <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+      <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+       var num = 0;
+
+    function updateNum(){
+
+        ReactDOM.render(
+            <div>{num++}</div>,
+            document.getElementById("root")
+        )
+    }
+
+    setInterval(updateNum,1000);
+
+  var str = "niggas";
+
+  var niggasGrup = <h1> What's up {str}</h1> 
+
+    var lenght = 20;
+    var width = 10;
+
+    function calculateArea(x,y){
+      return x*y;
+    }
+    var eleNiggas = <div>The atra is: {calculateArea(lenght,width)}</div>;
+
+
+    // EJEMPLO DE USO DE CLASSES
+    var maniggas = <button className ="deleButton"> Borrar </button>
+    var anotherNigga = <div className="niggaClass">nada</div>
+
+    // EJEMPLO USO DE ATRIBUTOS DE ESTILO
+
+    var colorNigga = {
+      backgroudColor: 'red',
+      fontSize: 25,
+      width: 100
+    }
+
+    var coloredNigga = <div style={colorNigga}>
+
+    // EJEMPLO DE EMBED STYLES
+
+    var embedNigga = <div style={{width:200, height:300}}>
+
+    // EJEMPLO DE DIVS ANIDADOS
+
+      function algo(){
+            var nestedNigga = (
+        <div>
+          <div>uno</div>
+          <div>dos</div>
+        </div>
+      )
+         ReactDOM.render(
+              nestedNigga,
+              document.getElementById("root")
+          )
+      }
+      algo();
+            
+
+
+
+    </script>
+  
+
+  </body>
+</html>

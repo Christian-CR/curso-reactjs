@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <meta charset="UTF-8">
+
+      <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+      <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      
+
+      function Pewdepie(loco){
+        return <h1>Value: {loco.arreglito[loco.indice]}</h1>
+    }
+
+    ReactDOM.render(
+      <Pewdepie arreglito={[32,45]} indice="1"/>,
+        document.getElementById("root")
+    )
+
+      
+    </script>
+
+
+<div id="root"></div>
+<HelloWorld/>
+
+
+
+    </body></html>
