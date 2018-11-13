@@ -10,23 +10,45 @@
   </head>
   <body>
 
-    <div id="root"></div>
-
+  
+    ej:1
+    
     <script type="text/babel">
-      
-
-      function Pewdepie(loco){
-        return <h1>Value: {loco.arreglito[loco.indice]}</h1>
+     class Welcome extends React.Component{
+    render(){
+            return <h1>Hello World!</h1>
+        }
     }
-
-    ReactDOM.render(
-      <Pewdepie arreglito={[32,45]} indice="1"/>,
-        document.getElementById("root")
-    )
-
-      
+    var element = <Welcome/>
     </script>
 
+    ej:2
+    
+    <script>
+            class Welcome extends React.Component{
+          render(){
+              return <h1>Hello World!</h1>
+          }
+        } 
+        //renders <h1>Hello World!</h1>
+        ReactDOM.render(
+            <Welcome/>,
+            document.getElementById("root")
+        )
+
+      </script>
+    
+    ej:3
+    
+    <script>
+        class Welcome extends React.Component{
+          render(){
+              return <h1>Message: {this.props.message}</h1>
+          }
+        }
+      <Welcome message="Hello World!"/>
+      </script>
+    
 
 <div id="root"></div>
 
