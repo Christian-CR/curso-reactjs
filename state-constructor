@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <meta charset="UTF-8">
+
+      <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+      <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+
+  </head>
+  <body>
+  
+  <!-- Ejemplo básico de constructor -->
+  
+  class Counter extends React.Component{
+    constructor(props){
+        super(props)
+    }
+    render(){
+          return <div>Hello World!</div>
+      }
+  }
+  
+  <!-- Agregando un estado inicial -->
+  
+  class Counter extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {foo:123,bar:456}
+    }
+    render(){
+          return <div>foo:{this.state.foo} bar:{this.state.bar}</div>
+      }
+  }
+  
+  <!-- cambiando de estado -->
+  
+ ->   this.setState({message:"new message"})
+  
+  
+  ej: de cambio de estado
+  
+  class Counter extends React.Component{
+    constructor(props){
+        super(props)
+        //initial state set up
+        this.state = {message:"initial message"}
+    }
+    componentDidMount(){
+        //updating state
+        this.setState({message:"new message"})
+    }
+    render(){
+        return <div>Message:{this.state.message}</div>
+    }
+}
+
+  
+  </body>
+  
+  <html>
