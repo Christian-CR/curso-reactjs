@@ -90,8 +90,19 @@ class Counter extends React.Component{
     }
 }
 
+<!--El método setState (updater, [callback]) puede tomar una función de actualización 
+    como su primer argumento para actualizar el estado según el estado y las propiedades anteriores-->
+<!--El valor de retorno de la función de actualización se fusionará 
+    superficialmente con el estado del componente anterior-->
+<!--El método actualiza el estado de forma asíncrona, por lo que hay una opción
+     callback que se llamará una vez que el estado haya terminado de actualizarse completamente -->
 
+this.setState((prevState, props) => { 
+    return {attribute:"value"}
+})
   
+  
+ 
   </body>
   
   <html>
