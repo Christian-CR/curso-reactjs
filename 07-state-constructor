@@ -138,7 +138,23 @@ Message:initial message!
 <!-- Usando valores de estado futuros -->
 <!-- =======**********============== -->
 
+<!-- Como el estado se actualiza de forma asíncrona, 
+      no solo puede esperar que los valores de estado se actualicen inmediatamente 
+      después de una llamada al método setState() -->
+      
+//this.state.count is originally 0
+this.setState({count:42})
+console.log(this.state.count)
+//outputs 0 still
 
+<!-- Para usar un estado después de que se haya actualizado, 
+      haga toda la lógica en el argumento de callback -->
+
+//this.state.count is originally 0
+this.setState({count:42}, () => {
+    console.log(this.state.count)
+    //outputs 42
+})
  
   </body>
   
