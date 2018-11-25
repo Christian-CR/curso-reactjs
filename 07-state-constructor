@@ -10,7 +10,10 @@
   </head>
   <body>
   
-  <!-- Ejemplo básico de constructor -->
+  <!--Ejemplo básico de constructor -->
+  <!--El método contructor es llamado antes del componente de react y es utilizado para establecer su estado inicial-->
+  <!--Hay que llamar a super(props) ó el this.props atributo no va a funcionar-->
+  <!--El primer argumento del método constructor() representa las propiedades que pasarán por el componente-->
   
   class Counter extends React.Component{
     constructor(props){
@@ -22,6 +25,7 @@
   }
   
   <!-- Agregando un estado inicial -->
+  <!--El estado puede ser representado como un objeto con atributos-->
   
   class Counter extends React.Component{
     constructor(props){
@@ -54,6 +58,8 @@
         return <div>Message:{this.state.message}</div>
     }
 }
+
+
 
   
   </body>
