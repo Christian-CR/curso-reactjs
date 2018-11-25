@@ -10,7 +10,10 @@
   </head>
   <body>
   
+  <!-- =======**********============== -->
   <!--Ejemplo básico de constructor -->
+  <!-- =======**********============== -->
+  
   <!--El método contructor es llamado antes del componente de react y es utilizado para establecer su estado inicial-->
   <!--Hay que llamar a super(props) ó el this.props atributo no va a funcionar-->
   <!--El primer argumento del método constructor() representa las propiedades que pasarán por el componente-->
@@ -36,8 +39,11 @@
           return <div>foo:{this.state.foo} bar:{this.state.bar}</div>
       }
   }
-  
+ 
+ <!-- =======**********============== -->
   <!-- cambiando de estado -->
+  <!-- =======**********============== -->
+  
   <!--El método setState(updater,[callback]) es usado para actualizar el estado-->
   <!--Él toma un objeto actualizador y actualiza el estado del componente-->
   <!--Toma el objeto que actualiza y actualiza el estado del componente poniéndo por encima del anterior, el nuevo estado-->
@@ -64,8 +70,10 @@
     }
 }
 
-
+<!-- =======**********============== -->
 <!--Updating state based on previous state-->
+<!-- =======**********============== -->
+
 <!--El método setState() no actualiza de inmediato el estado del componente, 
     solo pone el nuevo estado en línea para ser llamado posteriormente-->
 <!--React puede almacemar muchas solicitudes de actualización para hacer el render mas eficiente-->
@@ -101,9 +109,10 @@ this.setState((prevState, props) => {
     return {attribute:"value"}
 })
   
-
+<!-- =======**********============== -->
 <!--Aquí hay un ejemplo de cómo actualizar el estado basado en el estado anterior:-->
-  
+<!-- =======**********============== -->
+
 class Counter extends React.Component{
     constructor(props){
         super(props)
@@ -120,7 +129,16 @@ class Counter extends React.Component{
         return <div>Message:{this.state.message}</div>
     }
 }
-  
+
+// retorna esto:
+Message:initial message!
+
+
+<!-- =======**********============== -->
+<!-- Usando valores de estado futuros -->
+<!-- =======**********============== -->
+
+
  
   </body>
   
