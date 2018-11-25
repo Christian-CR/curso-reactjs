@@ -65,6 +65,31 @@
 }
 
 
+<!--Updating state based on previous state-->
+<!--El método setState() no actualiza de inmediato el estado del componente, 
+    solo pone el nuevo estado en línea para ser llamado posteriormente-->
+<!--React puede almacemar muchas solicitudes de actualización para hacer el render mas eficiente-->
+<!--Debido a esto, se deben tomar precauciones especiales al actualizar el estado 
+    según el estado anterior del componente-->
+
+class Counter extends React.Component{
+    constructor(props){
+        super(props)
+        //initial state set up
+        this.state = {value:0}
+    }
+    componentDidMount(){
+        //updating state
+        this.setState({value:this.state.value+1})
+        this.setState({value:this.state.value+1})
+        this.setState({value:this.state.value+1})
+        this.setState({value:this.state.value+1})
+    }
+    render(){
+        return <div>Message:{this.state.message}</div>
+    }
+}
+
 
   
   </body>
