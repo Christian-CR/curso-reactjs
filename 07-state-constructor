@@ -38,6 +38,11 @@
   }
   
   <!-- cambiando de estado -->
+  <!--El método setState(updater,[callback]) es usado para actualizar el estado-->
+  <!--Él toma un objeto actualizador y actualiza el estado del componente-->
+  <!--Toma el objeto que actualiza y actualiza el estado del componente poniéndo por encima del anterior, el nuevo estado-->
+  <!--Hay una opció de callback que será llamada una vez que la actualización se haya completado-->
+  <!--Para usar el método setState() se debe usar this.setState()-->
   
  ->   this.setState({message:"new message"})
   
