@@ -155,6 +155,21 @@ this.setState({count:42}, () => {
     console.log(this.state.count)
     //outputs 42
 })
+
+<!-- =======**********============== -->
+<!-- State is not mutable -->
+<!-- =======**********============== -->
+
+
+<!-- El estado es de solo lectura, por lo que no debe intentar cambiar
+      manualmente los valores de los atributos de estado. Si es necesario actualizar 
+      el estado, el método setState () es la única forma de cambiar el estado -->
+      
+<!-- por ejemplo, no hacer esto -->
+   //incorrect, state should not be mutated directly
+this.state.message = "new message"
+
+
  
   </body>
   
