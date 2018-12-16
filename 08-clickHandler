@@ -4,9 +4,9 @@ class Counter extends React.Component{
         super(props)
         this.state = {count:0}
         //binding is necessary to make `this` point to the correct object
-        this.clickHandler = this.clickHandler.bind(this)
+        this.clickPichirulo = this.clickPichirulo.bind(this)
     }
-    clickHandler(){
+    clickPichirulo(){
       //increments the count of the state
       this.setState((prevState,props) => {
         return {count: prevState.count + 1}
@@ -14,14 +14,80 @@ class Counter extends React.Component{
     }
     render(){
         //renders a button that displays the state count
-        return <button onClick = {this.clickHandler}>{this.state.count}</button>
+        return (
+          <section>
+          <h1>Counter</h1>
+          <button onClick = {this.clickPichirulo}>{this.state.count}</button>
+           </section>
+        )
     }
 }
 
+class Showhide extends React.Component{
+    constructor(props){
+        super(props)
+        //initial state set up
+        this.state = {message:"initial message"}
+    }
+    componentDidMount(){
+        //updating state
+        this.setState((prevState, props) => {
+            return {message: prevState.message + ' mas na'}
+        })
+    }
+    render(){
+        return (
+          <section>
+            <h2>Message:{this.state.message}</h2>
+          </section>
+        )
+    }
+}
+
+class Accion extends React.Component{
+  constructor(props){
+     super(props)
+    
+    this.state = {
+      showMe:true
+    }
+  }
+  
+  operation(){
+    this.setState({
+      showMe: !this.state.showMe
+    })
+  }
+  
+  render(){
+    return(
+      <section>
+        {
+          this.state.showMe?
+            <div>a esconder</div>
+            :null
+        }
+      <button onClick = {() => this.operation()} >esconder</button>
+      </section>
+      )
+  }
+  
+  
+} 
+
+
+ function Pruebas(props){
+      return (
+        <div class="wrapper">
+           <Counter/>
+           <Showhide/>
+          <Accion/>
+          </div>
+          )
+    }
+
+
 ReactDOM.render(
-  <Counter/>,
+ <Pruebas/>,
   document.getElementById("root")
 )
-
-
-<div id="root"></div>
